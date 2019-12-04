@@ -3,14 +3,20 @@ let connection;
 const handlerUserInput = function(key) {
   if (key === '\u0003') {
     process.exit();
-  } else if (key === '\u0077') {
-    connection.write('Move: up');
-  } else if (key === '\u0061') {
+  } else if (key === '\u0077') { // w
+    connection.write('Move: up'); 
+  } else if (key === '\u0061') { // a
     connection.write('Move: left');
-  } else if (key === '\u0064') {
+  } else if (key === '\u0064') { // s
     connection.write('Move: right');
-  } else if (key === '\u0073') {
+  } else if (key === '\u0073') { // d
     connection.write('Move: down');
+  } else if (key === '\u0068') {  // h
+    connection.write('Say: hello');
+  } else if (key === '\u006D') { // m
+    connection.write('Say: move')
+  } else if (key === '\u0067') { // g
+    connection.write('Say: go away!')
   }
 }
 
